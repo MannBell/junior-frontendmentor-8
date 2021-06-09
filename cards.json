@@ -1,0 +1,29 @@
+[
+  {
+    "title": "Basic"
+    , "price1": "19.99"
+    , "price2": "199.99"
+    , "storage": "500 GB Storage"
+    , "users": "2 Users Allowed"
+    , "sending": "Send up to 3 GB"
+    , "featured": false
+  },
+  {
+    "title": "Professional"
+    , "price1": "24.99"
+    , "price2": "249.99"
+    , "storage": "1 TB Storage"
+    , "users": "5 Users Allowed"
+    , "sending": "Send up to 10 GB"
+    , "featured": true
+  },
+  {
+    "title": "Master"
+    , "price1": "39.99"
+    , "price2": "399.99"
+    , "storage": "2 TB Storage"
+    , "users": "10 Users Allowed"
+    , "sending": "Send up to 20 GB"
+    , "featured": false
+  }
+]

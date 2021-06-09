@@ -1,0 +1,215 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@700&display=swap');
+
+:root {
+  box-sizing: border-box;
+  /* VARIABLES */
+  /* Colors */
+  --gradient1: linear-gradient(135deg, hsl(236, 72%, 79%), hsl(237, 63%, 64%));
+  --gradient2: linear-gradient(90deg, hsl(236, 72%, 79%), hsl(237, 63%, 64%));
+  --violet: hsl(237, 63%, 64%);
+  --very-light-grayish-blue: hsl(240, 78%, 98%);
+  --light-grayish-blue: hsl(234, 14%, 74%);
+  --grayish-blue: hsl(233, 13%, 49%);
+  --dark-grayish-blue: hsl(232, 13%, 33%);
+  /* Font */
+  --font-size: 15px;
+  --family: "Montserrat", "sans-serif";
+  --font-bold: 700;
+}
+
+*, ::before
+, ::after {
+  box-sizing: inherit;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: var(--family);
+  text-align: center;
+  color: var(--grayish-blue);
+  font-weight: var(--font-bold);
+  font-size: var(--font-size);
+  padding: 4.5em 1.5em 1em;
+  background-color: var(--very-light-grayish-blue);
+  background-image: url("./images/bg-top.svg");
+  background-repeat: no-repeat;
+  background-position: top 0 right -50vw;
+}
+
+@media only screen and (min-width: 60em) {
+  body {
+    background-image: url("./images/bg-top.svg")
+    , url("./images/bg-bottom.svg");
+    background-repeat: no-repeat;
+    background-position: top right, bottom left;
+  } 
+}
+
+ul {
+  list-style: none;
+}
+
+.pricing {
+  margin-bottom: 5em;
+}
+
+.pricing > h1 {
+  color: var(--dark-grayish-blue);
+  margin-bottom: 1em;
+}
+
+.toggle-wrapper {
+  display: flex;
+  justify-content: center;
+  color: var(--light-grayish-blue);
+}
+
+.toggle-wrapper .toggle {
+  background: var(--gradient2);
+  padding: .15em;
+  border-radius: 3em;
+  width: 2.5em;
+  margin: 0 1.5em;
+  cursor: pointer;
+  display: flex;
+  justify-content: flex-end;
+}
+
+.toggle-wrapper .toggle:hover {
+  opacity: .5;
+}
+
+@media only screen and (min-width: 60em) {
+  .toggle-wrapper .toggle {
+    padding: .2em;
+    width: 3.2em;
+  }  
+}
+
+.toggle-wrapper .toggle.on {
+  justify-content: flex-start;
+}
+
+.toggle-wrapper .toggle::before {
+  content: "";
+  display: block;
+  --size: 1.1em;
+  width: var(--size);
+  height: var(--size);
+  background: #fff;
+  border-radius: 50%;
+}
+
+@media only screen and (min-width: 60em) {
+  .toggle-wrapper .toggle::before {
+    --size: 1.4em;
+  } 
+}
+
+/* CARDS START */
+
+.cards {
+  max-width: 25em;
+  margin: 0 auto;
+}
+
+@media only screen and (min-width: 60em) {
+  .cards {
+    max-width: 70em;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    z-index: 0;
+  }
+  .cards > * {
+    flex: 1;
+    position: relative;
+  }
+  .cards > :nth-of-type(2) {
+    z-index: 1;
+  }
+}
+
+.card {
+  margin-bottom: 2em;
+  border-radius: .5em;
+  padding: 2em;
+  background: #fff;
+  box-shadow: 0 1em 3em #0002;
+}
+
+.card.featured {
+  background: var(--gradient1);
+  padding: 2em;
+  color: #fff;
+}
+
+@media only screen and (min-width: 60em) {
+  .card.featured {
+    padding: 4em 2em;
+  } 
+}
+
+.card b {
+  display: block;
+  font-weight: inherit;
+}
+
+b.price {
+  font-size: 4rem;
+  color: var(--dark-grayish-blue);
+  margin: .3em auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.card.featured b.price {
+  color: #fff;
+}
+
+.price span:nth-of-type(1) {
+  font-size: 2rem;
+  margin-right: .1em;
+}
+
+.card ul li {
+  --border-color: var(--light-grayish-blue);
+  padding: 1em 0;
+  border-bottom: 1px solid var(--border-color);
+}
+
+.card ul li:nth-of-type(1) {
+  border-top: 1px solid var(--border-color);
+}
+
+.card .button {
+  display: block;
+  padding: 1em;
+  margin-top: 2em;
+  border-radius: inherit;
+  text-decoration: none;
+  text-transform: uppercase;
+  letter-spacing: .1em;
+  color: #fff;
+  background: var(--gradient2);
+  border: 1px solid #0000;
+}
+
+.card .button:hover {
+  background: #0000;
+  color: var(--violet);
+  border: 1px solid currentColor;
+}
+
+.card.featured .button {
+  background: #fff;
+  color: var(--violet);
+}
+
+.card.featured .button:hover {
+  color: #fff;
+  background: #0000;
+}
